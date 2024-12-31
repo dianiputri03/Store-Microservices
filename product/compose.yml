@@ -1,0 +1,11 @@
+services:
+  db:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=productstore'
+      - 'POSTGRES_PASSWORD=123'
+      - 'POSTGRES_USER=dian'
+    ports:
+      - '5433:5433'
+    command: postgres -c 'port=5433'
+
